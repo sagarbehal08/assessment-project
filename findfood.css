@@ -1,0 +1,171 @@
+body
+{
+  font-family:"Helvetica";
+
+}
+#logo2
+{
+  font-weight:750;
+}
+.logo
+{
+  margin-top:20px;
+  margin-left:50px;
+  font-family: 'Audiowide', cursive;
+
+}
+.logo p
+{
+  color:#fd6502;
+  letter-spacing: 2px;
+  font-weight:700;
+}
+
+
+
+#header {
+    display: inline-flex;
+    width: 100%;
+
+    z-index:9000;
+    overflow: auto;
+    background: #fff;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.15s linear;
+}
+
+#header.active {
+     box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.location
+{
+  display: inline-flex;
+  margin-top:45px;
+  margin-left:100px;
+}
+.location.material_icons
+{
+  margin-top: 8px;
+}
+#location_icon
+{
+    letter-spacing: 1px;
+}
+.search
+{
+  margin-left: 300px;
+    margin-top: 45px;
+}
+.search input
+{
+  border-radius:20px;
+  border:2px solid #d4d5d9;
+  padding: 5px 10px;
+      width: 350px;
+        letter-spacing: 1px;
+}
+.search input:hover
+{
+  border:2px solid #fd6502;
+}
+.search input:focus
+{
+ outline: none;
+}
+.search button
+{
+  border-radius:20px;
+  margin-left:10px;
+  padding: 4px 30px;
+  border:2px solid #fd6502;
+  background-color: #fd6502;
+  color:white;
+  letter-spacing: 1px;
+
+}
+.search button:hover
+{
+  box-shadow: 0 0 11px rgba(33,33,33,.4);
+}
+.search button:focus
+{
+  outline: none;
+}
+hr
+ {
+  border:none;
+  height: 30px;
+ 	width: 90%;
+	height: 50px;
+	margin-top:0;
+	border-bottom: 1px solid  #fd6502;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+#rest1_image
+{
+  width:380px;
+  height:250px;
+  padding:10px;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+#main
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:-5px;
+  margin:10px;
+}
+.extra h2
+{
+  letter-spacing: 1px;
+
+}
+.extra
+{
+  margin-top:130px;
+}
+#restaurant
+{
+  margin:20px;
+  transition: box-shadow .3s;
+  background: #fff;
+  float: left;
+}
+#restaurant:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  border-radius: 5px;
+}
+#timming_rate
+{
+  display: flex;
+}
+#rating
+{
+  margin-left:10px;
+}
+#restro_name,#cousin,#timming_rate
+{
+
+  margin:10px 10px;
+  letter-spacing: 1px;
+}
+#restro_name h4
+{
+  text-transform: capitalize;
+}
+#timming_rate p
+{
+   border:1px solid #ebebeb;
+   background-color: #ebebeb;
+}
+#rating,#timming
+{
+  padding:2px 5px;
+}
+#cousin_text
+{
+  color: #a5a7a5;
+}
