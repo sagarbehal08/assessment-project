@@ -6,7 +6,7 @@ body
 .h_image
 {
   /* float:right; */
-  background-image:url('h-image.jpg');
+  background-image:url("h-image.jpg");
   position: absolute;
   left: calc(50% + 80px);
   right: 0;
@@ -126,6 +126,7 @@ letter-spacing: 2px;
 .header-search i
 {
   margin-top:18px;
+  margin-left:5px;
 }
 #mainsearch
 {
@@ -135,7 +136,7 @@ padding-top: 0 !important;
 caret-color:#fc8019;
 font-size: 18px !important;
 font-weight: 500;
-width:350px;
+width:340px;
 border:none;
 letter-spacing: 1px;
 }
