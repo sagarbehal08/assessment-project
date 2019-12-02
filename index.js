@@ -105,7 +105,7 @@ function verification()
   {
     $('#remove').remove();
     // remove.remove();
-     window.open("index.html");
+     window.open("index.html","_self");
   }
   else {
   var incorrect=document.getElementById("incorrect");
