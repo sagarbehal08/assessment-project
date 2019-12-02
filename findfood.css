@@ -21,7 +21,10 @@ body
   font-weight:700;
 }
 
-
+.logo a:hover
+{
+ text-decoration: none;
+}
 
 #header {
     display: inline-flex;
@@ -55,7 +58,7 @@ body
 }
 .search
 {
-  margin-left: 300px;
+  margin-left: 150px;
     margin-top: 45px;
 }
 .search input
@@ -168,4 +171,13 @@ hr
 #cousin_text
 {
   color: #a5a7a5;
+}
+#anchor
+{
+  color:black;
+
+}
+#anchor :hover
+{
+  color:black;
 }

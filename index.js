@@ -28,17 +28,17 @@ function getlocation()
 function showPosition(position)
 {
   // alert("a");
-   var url = "https://developers.zomato.com/api/v2.1/cities?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&apikey=3543d3e430f5a481ecd55147fdae5ddc"
-  // alert("url");
-  var url1 ="https://api.opencagedata.com/geocode/v1/json?q="+position.coords.latitude+"+"+position.coords.longitude+"&key=d878b010f5d34708bbdde615eafde265";
+   var url = "https://developers.zomato.com/api/v2.1/cities?lat=30.516459&lon=76.659210&apikey=3543d3e430f5a481ecd55147fdae5ddc"
+  //alert("url");
+  var url1 ="https://api.opencagedata.com/geocode/v1/json?q=30.516459+76.659210&key=d878b010f5d34708bbdde615eafde265";
   console.log(url);
   console.log(url1);
   var xhr = new XMLHttpRequest();
-  var xhr1 = new XMLHttpRequest();
+ var xhr1 = new XMLHttpRequest();
   xhr.open('GET',url);
-  xhr1.open('GET',url1);
+ xhr1.open('GET',url1);
   xhr.onreadystatechange=test;
-  xhr1.onreadystatechange=test1;
+ xhr1.onreadystatechange=test1;
     function test()
     {
       if(this.status===200 && this.readyState===4)
@@ -53,7 +53,7 @@ function showPosition(position)
         // var country_name=res_data.location_suggestions[0].country_name;
         // var state_name=res_data.location_suggestions[0].state_name;
         // index_location.value=city_name+", "+country_name;
-        // findfood_location.innerHTML=city_name+", "+country_name;
+        //findfood_location.innerHTML=city_name+", "+country_name;
       }
     }
     function test1()

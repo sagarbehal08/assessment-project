@@ -11,7 +11,7 @@ else {
 }
 function showPosition(position)
 {
-  var url1 ="https://api.opencagedata.com/geocode/v1/json?q="+position.coords.latitude+"+"+position.coords.longitude+"&key=d878b010f5d34708bbdde615eafde265";
+  var url1 ="https://api.opencagedata.com/geocode/v1/json?q=30.5164598+76.659210&key=d878b010f5d34708bbdde615eafde265";
   console.log(url1);
   var xhr1 = new XMLHttpRequest();
   xhr1.open('GET',url1);
@@ -29,7 +29,7 @@ function showPosition(position)
     }
     xhr1.send();
 
-    var url2 ="https://developers.zomato.com/api/v2.1/geocode?lat="+position.coords.latitude+"8&lon="+position.coords.longitude+"&apikey=3543d3e430f5a481ecd55147fdae5ddc";
+    var url2 ="https://developers.zomato.com/api/v2.1/geocode?lat=30.5164598&lon=76.659210&apikey=3543d3e430f5a481ecd55147fdae5ddc";
     console.log(url2);
     var xhr2 = new XMLHttpRequest();
     xhr2.open('GET',url2);
@@ -43,11 +43,15 @@ function showPosition(position)
           console.log(res_data);
          for(var i=0;i<res_data.nearby_restaurants.length;i++)
          {
+           var anchor=document.createElement("a");
+           anchor.setAttribute("id","anchor");
+           anchor.setAttribute("href",res_data.nearby_restaurants[i].restaurant.events_url);
           var restaurant=document.createElement("div");
           restaurant.setAttribute("id","restaurant");
           console.log(restaurant);
-          document.getElementById("main").appendChild(restaurant);
+          anchor.appendChild(restaurant);
           console.log(main);
+          document.getElementById("main").appendChild(anchor);
 
           //--------------------------------------------------------
           if(i%2==0){
@@ -100,7 +104,9 @@ function showPosition(position)
           var cousin_text=document.createElement("p")
           cousin_text.setAttribute("id","cousin_text");
           var str=res_data.nearby_restaurants[i].restaurant.cuisines;
-          cousin_text.textContent=str.replace(/,/gi," *");
+          var currency=res_data.nearby_restaurants[i].restaurant.currency;
+          console.log(currency);
+          cousin_text.textContent=currency+"* "+str.replace(/,/gi," *");
           cousin.appendChild(cousin_text);
           restaurant.appendChild(cousin);
           console.log(main);
@@ -117,11 +123,11 @@ function showPosition(position)
           timming_rate.appendChild(timming);
           var rating=document.createElement("p")
           rating.setAttribute("id","rating");
-          rating.textContent=res_data.nearby_restaurants[i].restaurant.user_rating.aggregate_rating+" ";
+          rating.textContent=res_data.nearby_restaurants[i].restaurant.user_rating.aggregate_rating+" ("+res_data.nearby_restaurants[i].restaurant.user_rating.votes+"+) ";
           timming_rate.appendChild(rating);
           var icon=document.createElement("i");
           icon.setAttribute("class","material-icons");
-          icon.setAttribute("style","font-size:12px;");
+          icon.setAttribute("style","font-size:12px;padding-top:2px;");
           icon.textContent="start";
           rating.appendChild(icon);
           console.log(rating);
@@ -145,11 +151,16 @@ function showPosition(position)
                 {
                 rem_restros.removeChild(rem_restros.firstChild);
                 }
+                var anchor=document.createElement("a");
+                anchor.setAttribute("id","anchor");
+                anchor.setAttribute("href",res_data.nearby_restaurants[j].restaurant.events_url);
                 var restaurant=document.createElement("div");
                 restaurant.setAttribute("id","restaurant");
                 console.log(restaurant);
-                document.getElementById("main").appendChild(restaurant);
+  //              document.getElementById("main").appendChild(restaurant);
+                anchor.appendChild(restaurant);
                 console.log(main);
+                main.appendChild(anchor);
 
                 //--------------------------------------------------------
                 if(j%2==0){
@@ -202,7 +213,9 @@ function showPosition(position)
                 var cousin_text=document.createElement("p")
                 cousin_text.setAttribute("id","cousin_text");
                 var str=res_data.nearby_restaurants[j].restaurant.cuisines;
-                cousin_text.textContent=str.replace(/,/gi," *");
+                var currency=res_data.nearby_restaurants[j].restaurant.currency;
+                console.log(currency);
+                cousin_text.textContent=currency+"* "+str.replace(/,/gi," *");
                 cousin.appendChild(cousin_text);
                 restaurant.appendChild(cousin);
                 console.log(main);
@@ -219,7 +232,7 @@ function showPosition(position)
                 timming_rate.appendChild(timming);
                 var rating=document.createElement("p")
                 rating.setAttribute("id","rating");
-                rating.textContent=res_data.nearby_restaurants[j].restaurant.user_rating.aggregate_rating+" ";
+              rating.textContent=res_data.nearby_restaurants[j].restaurant.user_rating.aggregate_rating+" ("+res_data.nearby_restaurants[j].restaurant.user_rating.votes+"+) ";
                 timming_rate.appendChild(rating);
                 var icon=document.createElement("i");
                 icon.setAttribute("class","material-icons");
