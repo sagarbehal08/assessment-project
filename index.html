@@ -21,9 +21,60 @@
               <a href="index.html"><p><font size="10"><strong>F</strong></font><font size="6" id="logo2">oodies</font></p></a>
             </div>
             <div class="buttons">
-              <a href="#"><b>Login</b></a>&nbsp&nbsp&nbsp
-              <input type="button" value="Sign up">
+              <a href="#" data-toggle="modal" data-target="#myModal" id="remove"><b>Login</b></a>&nbsp&nbsp&nbsp
+              <input type="button" value="Sign up" data-toggle="modal" data-target="#myModal" id="remove">
           </div>
+          <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+
+		<form action="#">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h1>Create Account</h1>
+      <input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+      <p id="incorrect"></p>
+			<input type="email" placeholder="Email" id="email"/>
+			<input type="password" placeholder="Password" id="passwrd"/>
+			<a href="#">Forgot your password?</a>
+			<button onclick="verification()">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         </div>
         <div class="headline">
           <h1 id="changeText"></h1>
@@ -34,7 +85,7 @@
           <input type="text" id="mainsearch" placeholder="Enter your location">
           <i class="material-icons" style="font-size:16px;">my_location</i>
           <span onclick="getlocation()">Locate Me</span>
-          <input type="button" value="Find Food" class="mainsearch2" onclick="window.location.href='findfood.html';">
+          <input type="button" value="Find Food" id="mainsearch2" onclick="window.location.href='findfood.html';">
 
  </div>
  </div>

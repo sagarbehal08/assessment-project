@@ -73,9 +73,44 @@ function showPosition(position)
         // findfood_location.innerHTML=city_name+", "+country_name;
       }
     }
+     // document.getElementById("mainsearch2").addEventListener("click", function(){
+     //   // var t_location=document.getElementById("mainsearch");
+     //   document.getElementById("location_icon").innerHTML="Hello";//t_location.value;
+     // });
 
-  xhr.send();
-  xhr1.send();
-
+     xhr.send();
+     xhr1.send();
 
   }
+//------------------------------------------------------------------------------
+  const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+
+//------------------------------------------------------------------------------
+function verification()
+{
+  var email=document.getElementById("email").value;
+  var pass=document.getElementById("passwrd").value;
+  if(email==="sagarbehal@gmail.com" && pass==="123456789")
+  {
+    $('#remove').remove();
+    // remove.remove();
+     window.open("index.html");
+  }
+  else {
+  var incorrect=document.getElementById("incorrect");
+  incorrect.setAttribute("style","color:red;")
+  incorrect.innerHTML="Incorrect Email Id or Password";
+
+  }
+}
