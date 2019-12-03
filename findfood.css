@@ -136,6 +136,7 @@ hr
   transition: box-shadow .3s;
   background: #fff;
   float: left;
+
 }
 #restaurant:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
