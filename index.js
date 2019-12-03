@@ -104,10 +104,11 @@ function verification()
   if(email==="sagarbehal@gmail.com" && pass==="123456789")
   {
 
-    // remove.remove();
+    // remove.remove()
+	alert("Succesfully login");
     window.open("index.html","_self");
     $('#remove').remove();
-    alert("Succesfully login");
+    
   }
   else {
   var incorrect=document.getElementById("incorrect");
