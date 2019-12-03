@@ -106,7 +106,7 @@ function showPosition(position)
           var str=res_data.nearby_restaurants[i].restaurant.cuisines;
           var currency=res_data.nearby_restaurants[i].restaurant.currency;
           console.log(currency);
-          cousin_text.textContent=currency+"* "+str.replace(/,/gi," *");
+          cousin_text.textContent=currency+" * "+str.replace(/,/gi," *");
           cousin.appendChild(cousin_text);
           restaurant.appendChild(cousin);
           console.log(main);
@@ -215,7 +215,7 @@ function showPosition(position)
                 var str=res_data.nearby_restaurants[j].restaurant.cuisines;
                 var currency=res_data.nearby_restaurants[j].restaurant.currency;
                 console.log(currency);
-                cousin_text.textContent=currency+"* "+str.replace(/,/gi," *");
+                cousin_text.textContent=currency+" * "+str.replace(/,/gi," *");
                 cousin.appendChild(cousin_text);
                 restaurant.appendChild(cousin);
                 console.log(main);

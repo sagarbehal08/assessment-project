@@ -103,9 +103,11 @@ function verification()
   var pass=document.getElementById("passwrd").value;
   if(email==="sagarbehal@gmail.com" && pass==="123456789")
   {
-    $('#remove').remove();
+
     // remove.remove();
-     window.open("index.html","_self");
+    window.open("index.html","_self");
+    $('#remove').remove();
+    alert("Succesfully login");
   }
   else {
   var incorrect=document.getElementById("incorrect");
